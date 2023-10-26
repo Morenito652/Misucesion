@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi herencia CDMX</title>
+
+    <!-- CSS only Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logoS.svg" alt="Bootstrap" width="50" height="100">
+          <p class="nombre-empresa">Gónzalez Soriano y Cía. Asesores, S.C.</p>
+        </a>
+      </div>
+    </nav>
+    <!-- Fin navbar -->
+
+    <div class="contenedor">
+
+      <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-interval="false" data-bs-wrap="false">
+
+        <!-- Lista Tarjetas -->
+        <div class="carousel-inner">
+
+          <!-- Inicio Tarjeta -->
+          <div class="carousel-item active tarjeta" data-numero-tarjeta="1">
+
+            <div class="contenido">
+
+              <div class="instrucciones">
+
+                <p>Bienvenido al programa "Mi herencia CDMX".</p>
+                <p>Aquí podrás conocer quiénes serían los herederos -y sus respectivos porcentajes de herencia- en caso de que fallezcas sin haber realizado testamento.</p>
+                <p>Igualmente podrás conocer los herederos y porcentajes de herencia en caso de otra persona siempre y cuando se trate de una sucesión (herencia) en la Ciudad de México.</p>
+
+              </div>   
+              
+              <div class="terminos">
+
+                <ul>
+
+                  <li><a href="#">Términos y condiciones</a></li>
+
+                  <li><a href="#">Aviso de privacidad</a></li>
+
+                </ul>
+
+              </div>
+
+              <button id="btn-iniciar" type="button" class="btn btn-primary btn-siguiente" data-bs-target="#carouselExampleControls" data-bs-slide="next">Iniciar</button>
+
+            </div>
+
+          </div>
+          <!-- Fin Tarjeta -->
+
+          <!-- Inicio Tarjeta -->
+          <div class="carousel-item tarjeta align-self-center" data-numero-tarjeta="2">
+
+            <div class="contenido" id="contenido1">
+              
+              <div class="label-input">
+
+                <p>Ingresa el nombre de la persona:</p>
+                <input type="text" id="nombrePersona" class="barra-texto align-self-center dato-persona" placeholder="Persona 1" data-atributo="Nombre persona">
+
+              </div>
+
+              <div class="label-input">
+
+                <input type="checkbox" id="input-check" value="" checked>
+              
+                <label> Aún vive</label><br>
+
+              </div>
+
+              <div class="label-input invisible" id="fecha-fallecimiento">
+
+                <label for="">Fecha de fallecimiento: </label>
+
+                <input type="date" id="fecha" class="input-fecha align-self-center dato-persona" data-atributo="Fecha fallecimiento persona">
+
+              </div>
+              
+            </div>
+
+          </div>
+          <!-- Fin Tarjeta -->
+
+        </div>
+        <!-- Fin lista tarjetas -->
+
+        <!-- Botones anterior y siguiente -->
+        <button id="flecha-anterior" class="carousel-control-prev invisible" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button id="flecha-siguiente" id="flecha-siguiente" class="visible carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Fin botones anterior y siguiente -->
+      
+    </div>
+
+
+      <!-- Modal -->
+  <div class="modal fade" id="modalContactar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Aviso</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="textoModal justificado">
+
+            <p>En este caso es necesario revisar la situación legal de <span id="nombre-modal"></span> para tomar una decisión.</p>
+            <p>¿Deseas ser contactado por un abogado?</p>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="index.html">No, gracias</a></button>
+          <button type="button" class="btn btn-primary"><a href="contacto.html">Sí, claro</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" id="ayuda">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ayuda</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="texto-ayuda"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle with Popper Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  <script src="js/app.js" type="module"></script>
+  <script src="js/globales.js" type="module"></script>
+
+</body>
+</html>
