@@ -128,15 +128,15 @@ button a, button a:hover{
 	width: 70%;
 	margin: auto;
 }
-.tarjeta{
-	
-	text-align: left;
-	color: #000;
-	border: #1A222A 3px solid;
-	border-radius: 15px;
-	margin: 3rem 0;
-
+.tarjeta {
+    text-align: left;
+    color: #000;
+    border: #3268C1 1px solid;
+    border-radius: 15px;
+    margin: 3rem 0;
+    font-family: 'Lato', sans-serif; /* Esta es la línea que estás añadiendo */
 }
+
 .contenido{
 
 	margin: 5rem auto;
