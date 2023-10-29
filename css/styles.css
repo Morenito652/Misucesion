@@ -10,7 +10,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #6187A6 !important;
+    background-color: #FFFFFF !important;
 }
 select, input{
 
