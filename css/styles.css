@@ -118,7 +118,8 @@ button a, button a:hover{
 
     display: inline;
     margin-left: 1rem;
-    color: #3268C1;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
     font-size: 1rem;
 }
 
